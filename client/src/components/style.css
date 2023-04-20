@@ -1,0 +1,210 @@
+.container-fluid.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    height: 100vh;
+    overflow-y: hidden;
+    /* position:relative;
+    left: 100px; */
+
+    background-image: url("https://s14415.pcdn.co/wp-content/uploads/2015/01/sentiment-analysis.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.form-sub-container{
+    background-color: #000d33;
+    color: white;
+    padding: 50px;
+    position: relative;
+    left: 300px;
+    bottom: 50px;
+    border-radius: 20px;
+
+    font-family: 'Roboto', sans-serif;
+
+    border: 10px double white;
+}
+
+.form-sub-result-container{
+    background-color: #00061a;
+    padding: 30px;
+    color: white;
+    border-radius: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-container form input{
+    width: 400px;
+    padding: 10px;
+    margin: 5px;
+    position: relative;
+    left : 50px;
+    margin: 30px 0px;
+}
+
+.form-container form input::placeholder{
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.result-container{
+    margin-top: 70px;
+}
+
+.container.graph-container{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    width: 70%;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.row{
+    overflow: hidden;
+}
+
+.col-lg-6.first{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding-top: 20px;
+    background-color: #161b22;
+    color: white;
+    /* padding: 6px 0px; */
+}
+
+.col-lg-6.second{
+
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #010409;
+    color: white;
+}
+
+.product-heading{
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+    border: 10px double white;
+    border-radius: 10px;
+}
+
+.col-lg-6.second .product-title{
+    margin-bottom: 50px;
+}
+
+.col-lg-6.second img{
+    width: 300px;
+}
+
+.container-fluid.display-container{
+    padding: 10px;
+}
+
+.result{
+    background-color: greenyellow;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+Link a{
+    text-decoration: none;
+}
+
+Link a:hover{
+    text-decoration: none;
+}
+
+nav{
+    position: relative;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    background-color: #000d33;
+
+    border-bottom:2px solid white; 
+
+}
+
+nav ul{
+    position: absolute;
+    right: 30px;
+}
+
+.container-fluid.table-container{
+    padding:100px 400px;
+    /* background-color: #000d33; */
+    height: 100vh;
+
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.navbar-brand{
+    color: white;
+    margin-left: 20px;
+}
+
+.navbar-brand:hover{
+    color: white;
+}
+
+.product-info{
+    margin: 30px 0px;
+    background-color: #161b22;
+    padding: 10px 5px;
+    margin-right: 10px;
+}
+
+.product-info li{
+    text-align: left;
+    margin: 10px 0px;
+}
+
+.form-sub-container input.number-input{
+    width: 200px;
+}
+
+.pagination-input{
+    display: flex;
+    align-items: center;
+}
+
+.top-result{
+    margin: 20px;
+    background-color: #0F2027;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.top-result h3{
+    margin-bottom: 20px;
+}
+
+.container-fluid.review-container{
+    padding: 20px 200px;
+    background-color:#010409;
+    color: white;
+}
+
+.container-fluid.review-container li{
+    margin : 10px
+}
+
+.each-review{
+    background-color:black;
+    padding: 15px;
+    border-radius: 10px;
+}
