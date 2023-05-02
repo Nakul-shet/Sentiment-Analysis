@@ -108,6 +108,8 @@ app.post("/product" , (req , res) => {
 
                 const url = `https://www.amazon.in/product-reviews/${id}?pageNumber=`;
 
+                const titleUrl = `https://www.amazon.in/dp/${id}`
+
                 for(i=1 ; i <= 30 ; i++){
 
                     axios.get(`${url}${i}` , {headers})

@@ -95,7 +95,7 @@ const Tracker = () => {
                                         <td>{tra.productTitle.trim()}</td>
                                         <td>{tra.total}</td>
                                         <td>
-                                            <mark style={{backgroundColor : "yellow"}}>{tra.positive} %</mark>
+                                            <mark style={{backgroundColor : "yellow", fontWeight : "bold"}}>{tra.positive} %</mark>
                                         </td>
                                         <td>{tra.neutral} %</td>
                                         <td>{tra.negative} %</td>

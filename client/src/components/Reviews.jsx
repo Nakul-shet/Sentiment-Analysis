@@ -27,7 +27,7 @@ const Reviews = () => {
                 loading ? 
                 <LoadingPage/> :
 
-                <div class="container-fluid review-container">
+                <div style={{height : "100vh"}} class="container-fluid review-container">
                     <h3>Consumer testimonials of Product : {product}</h3>
                     {reviews.map((rev) => {
                         if(rev.review.length > 300){

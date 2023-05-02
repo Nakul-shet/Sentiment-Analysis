@@ -14,7 +14,7 @@ const History = () => {
 
 
     useEffect(() => {
-        getHistory();
+        getHistory();   
     } , [])
 
     function getHistory(){

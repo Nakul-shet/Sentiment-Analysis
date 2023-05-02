@@ -2,6 +2,8 @@ import React from "react";
 import axios from "axios";
 import { useParams , useNavigate , Link} from "react-router-dom";
 
+import "./style.css"
+
 const RemoveTrack = () => {
 
     const {product} = useParams();
@@ -17,10 +19,16 @@ const RemoveTrack = () => {
 
     return(
         <>
-            <h1>{product}</h1>
-            <Link to="/">
-                <button type="submit" onClick={handleDelete}>Delete</button>
-            </Link>
+            <div class="container-fluid delete-container">
+                <div class="option">
+                    <small style={{color : "red"}}>(Deleting will erase the track status)</small>
+                    <h1>{product}</h1>
+                    <br/>
+                    <Link to="/">
+                        <button class="btn btn-md bg-danger text-white" type="submit" onClick={handleDelete}>Delete</button>
+                    </Link>
+                </div>
+            </div>
         </>
     );
 }
