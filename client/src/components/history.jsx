@@ -35,8 +35,9 @@ const History = () => {
         {
             !loading?
                 <div class="container-fluid table-container">
+                    <h1>Scraping records of the product</h1>
                     <table class="table table-bordered table-dark table-striped text-center">
-                        <thead class="bg-white text-dark">
+                        <thead class="text-white">
                             <th>Product Id</th>
                             <th>Discover the Sentiment</th>
                         </thead>

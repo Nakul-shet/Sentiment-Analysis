@@ -9,6 +9,7 @@ import {useNavigate} from "react-router-dom";
 
 const Form = () => {
 
+
     const navigate = useNavigate();
 
     const [productid , setProductid] = useState("");
@@ -55,8 +56,20 @@ const Form = () => {
                         <h1>Enter the Amazon Product ID</h1>
                         <form onSubmit={handleSubmit}>
                             <input class="form-control" onChange={handleChange} type="text" placeholder="eg: B09B5F3QBH (Find it in the product URL)"/>
+
+                            {/* <div style={{textAlign : "center"}}>
+                                <label>Choose review extraction settings</label>
+                                <select class="form-control">
+                                    <option value={preference.moderate}>Moderate</option>
+                                    <option onSelect={(e) => {setPref(e.target.value); console.log(e.target.value)}} value={preference.high}>High</option>
+                                    <option value={preference.extreme}>Extreame</option>
+                                </select>
+                            </div>
+                            
+                            <br/> */}
                             <button class="btn btn-md bg-primary text-white" type="submit">Scrape Product Reviews</button>
                         </form>
+
                     </div>
                     
                     {
