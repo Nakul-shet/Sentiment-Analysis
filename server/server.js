@@ -184,6 +184,17 @@ app.post('/analyze' , (req , res) => {
         console.log(err)
     })
 
+    let status;
+
+    const trackStatus = Track.findOne({productId : query})
+    trackStatus.exec().then((found) => {
+        if(found){
+            status = true
+        }else{
+            status = false
+        }
+    })
+
     let overallSentiment = '';
     let maxCount = -1;
 
@@ -218,8 +229,8 @@ app.post('/analyze' , (req , res) => {
 
     setTimeout(() => {
          console.log(aboutProduct , productImage , productTitle);
-         console.log(topRev)
-         res.send({result : "Analyze is available" ,/*topResult : topRev*/about : aboutProduct , title : productTitle , displayImage : productImage , sentiment: _.capitalize(overallSentiment), positive : sentimentCounts.positive , negative : sentimentCounts.negetive , neutral : sentimentCounts.neutral})
+         console.log(status)
+         res.send({result : "Analyze is available" , track : status ,about : aboutProduct , title : productTitle , displayImage : productImage , sentiment: _.capitalize(overallSentiment), positive : sentimentCounts.positive , negative : sentimentCounts.negetive , neutral : sentimentCounts.neutral})
     }, 5000)
 })
 

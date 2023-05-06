@@ -18,8 +18,7 @@ const BarChart = () => {
   const [title , setTitle] = useState("");
   const [picture , setPicture] = useState("");
   const [about , setAbout] = useState([]);
-  // const [top , setTop] = useState([]);
-  // const [percent , setPercent] = useState({})
+  const [track , setTrack] = useState(false)
 
   const [sentiment , setSentiment] = useState("");
 
@@ -56,17 +55,14 @@ const BarChart = () => {
             setTitle(res.data.title)
             setPicture(res.data.displayImage)
             setAbout(res.data.about)
-            // setTop(res.data.topResult)
+
+            console.log(res.data.track)
+
+            if(res.data.track == true){
+              setTrack(true)
+            }
 
             setSentiment(res.data.sentiment)
-
-            // const totalSentiment = positive + negative + neutral;
-            // const percentage = {
-            //   positivePercentage : 100 * (res.data.positive)/totalSentiment,
-            //   neurtalPercentage : 100 * (res.data.neutral)/totalSentiment,
-            //   negativePercentage : 100 * (res.data.negative)/totalSentiment
-            // }
-            // setPercent(percentage);
 
             setUserdata((prev) => {
               return(
@@ -136,11 +132,6 @@ const BarChart = () => {
                             </Link>
                           </li>
 
-                          {/* <li class="nav-item">
-                            <Link style={{color : "white"}} class="btn btn-md btn-outline-primary text-white" to={`/track/${positive}/${negative}/${neutral}/${product}`}>
-                              Track Product
-                            </Link>
-                          </li> */}
                         </ul>
                     </nav>
 
@@ -157,7 +148,10 @@ const BarChart = () => {
                         </div>
                       </div>
 
-                      <div class="custom-tracker">
+                      <div>
+                        {
+                          track != true ?
+                          <div class="custom-tracker">
                         <h3>Surveillance Parameter</h3>
                           <form align="left">
                             <div class="form-group">
@@ -175,8 +169,19 @@ const BarChart = () => {
                             </Link>
                           </form>
                       </div>
+                      :
+                      <div class="status-bar">
+                          <h4>This product is already being monitored</h4>
+                          <br/>
+                          <Link to="/trackHistory">
+                            <button class="btn bg-dark text-white">View Track</button>
+                          </Link>
+                      </div>
+                      }
 
                     </div>
+                      
+                  </div>
 
                     <div class="col-lg-6 second">
                       <div class="product-heading">

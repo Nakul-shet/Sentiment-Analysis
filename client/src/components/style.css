@@ -350,3 +350,13 @@ th {
     text-align: center;
     border-radius: 10px;
 }
+
+.status-bar{
+    margin: 50px;
+    padding: 50px;
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
