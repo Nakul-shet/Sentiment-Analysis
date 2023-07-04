@@ -1,5 +1,6 @@
 const express = require("express");
 const puppeteer = require("puppeteer");
+const { BayesClassifier } = require("natural");
 
 const Sentiment = require("sentiment");
 const cheerio = require("cheerio");
@@ -33,6 +34,11 @@ const headers = {
     'Connection': 'keep-alive',
     'Cookie': 'session-id=1234567890; session-id-time=2082787201; i18n-prefs=USD; sp-cdn="L5Z9:US"; x-wl-uid=1LqS+GLSbMb1A+Zw16gr71JWCU/A4Q4Xd/K4RbGClX9z21sl0r2LrGJ+OTZwsmiv3CdBbAv0pBk=; ubid-main=123-4567890-1234567; lc-acb=abc123',
 };
+
+app.get("/" , (req , res) => {
+
+    res.send("Welcome to the home page");
+})
 
 //-- Function to get Product ID
 app.post("/getProductId" , (req , res) => {
